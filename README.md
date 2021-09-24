@@ -10,7 +10,7 @@ Activar SSH (colocar una contraseña bastante fuerte, estamos expuestos ante int
 
 #crear stunnel.conf (copiar sin comillas)
 
-"
+
 #output = /var/log/stunnel4/stunnel.log
 #cert=/etc/stunnel/stunnel.pem
 #key=/etc/stunnel/stunnel.pem
@@ -24,4 +24,4 @@ Activar SSH (colocar una contraseña bastante fuerte, estamos expuestos ante int
 #[ssh]
 #accept = ip-raspberry:443
 #connect = 127.0.0.1:22
-"
+
