@@ -4,9 +4,9 @@ tunnel reverse with raspberry pi
 # Raspberry pi 4
 Activar SSH (colocar una contraseña bastante fuerte, estamos expuestos ante internet.)
 
-apt-get update
-apt-get upgrade
-apt-get install stunnel4 
+- apt-get update
+- apt-get upgrade
+- apt-get install stunnel4 
 
 #crear stunnel.conf (copiar sin comillas)
 
