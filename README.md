@@ -19,6 +19,8 @@ Activar SSH (colocar una contraseña bastante fuerte, estamos expuestos ante int
 ###### sslVersion = all
 ###### options = NO_SSLv2
 ###### options = NO_SSLv3
+###### options = NO_TLSv1
+###### options = NO_TLSv1.1
 ###### socket = l:TCP_NODELAY=1
 ###### socket = r:TCP_NODELAY=1
 ###### [ssh]
