@@ -48,6 +48,9 @@ insertar datos requeridos (puede quedar todo en blanco) excepto el common name (
 # comenzar stunnel
 
 ###### /etc/init.d/stunnel4 start
+o
+###### sudo su -> stunnel4
+(no usar stunnel (sin el 4) he descubierto que solo genera una conneccion con udpgw segun netstat, stunnel4 genera mas conecciones, lo que es = a mejor rendimiento)
 
 # abrir firewall para SSL
 
