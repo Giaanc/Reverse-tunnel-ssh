@@ -84,7 +84,50 @@ tutorial: https://youtu.be/-Ie9c0A6a0U?t=165
 
 finalmente ejecutar (dirigirse al directorio donde este badvpn-udpgw)
 
+###### badvpn start 
+o
 ###### badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 999
 
 
+#### otras configs ###
+
+// ver planes de energia
+
+Para ver los reguladores de velocidad disponibles, utilice este comando:
+###### $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors 
+performance powersave
+
+Si tiene más de un gobernador, puede verificar lo que está actualmente en uso con este comando:
+###### $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+powersave
+
+Para cambiar su procesador al modo de ondemand (predeterminado) , use:
+###### $ echo ondemand | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+ondemand
+
+Para cambiar su procesador al modo de rendimiento , use:
+###### $ echo performance | sudo tee /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+performance
+
+FIN plan energia //
+
+better performance extract from git 
+(network) https://gist.github.com/voluntas/bc54c60aaa7ad6856e6f6a928b79ab6c :
+
+### TUNING NETWORK PERFORMANCE ###
+
+# Default Socket Receive Buffer
+net.core.rmem_default = 31457280
+
+# Maximum Socket Receive Buffer
+net.core.rmem_max = 33554432
+
+# Default Socket Send Buffer
+net.core.wmem_default = 31457280
+
+# Maximum Socket Send Buffer
+net.core.wmem_max = 33554432
+
+# Increase number of incoming connections
+net.core.somaxconn = 65535
 
